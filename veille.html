@@ -42,62 +42,65 @@
 
     <!-- Post Content -->
     <article>
-      <div class="container">
-        <ul id="start" class="list-inline text-center">
-              <li class="list-inline-item">
-                <a href="veille.html#start">
-                    Veille technologique |
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="container.html#start">
-                    Conteneurisation |
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="docker.html#start">
-                    Docker |
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="critiques.html#start">
-                    Critiques |
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="curateur.html#start">
-                  webographie | 
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="future.html#start">
-                    Future
-                </a>
-              </li>
-            </ul>
+
         <div class="row">
           <div class="col-lg-8 col-md-10 mx-auto">
 
-            
+            <h2 class="section-heading">Plan</h2>
+            <p>
+            <ol>
+              <li>Mind map</li>
+              <li>Docker : veille technologique</li>
+              <li>Introduction</li>
+              <li>Conteneurisation</li>
+              <li>Docker et la conteneurisation</li>
+              <li>Application multi-conteneur</li>
+              <li>Docker swarm</li>
+              <li>Docker Vs virtualisation</li>
+              <li>Critiques</li>
+              <li>Webographie</li>
+            </ol>
+            </p>
+
+
+            <h2 class="section-heading">Mind map</h2>
+
+            <p>Avant de commencer la veille j'ai réalisé une "Mind map" qui illustre les différents technologies liés au sujet de la veille :</p>
+
+            <center><img src="img/map.jpg" width="600"></center><br />
+
+            <p>Une fois j'ai terminé la veille, j'ai re-dessiné la "Mind map" en se basant sur les informations collectées, ci-dessous la nouvelle "Mind map" : </p>
+
+            <center><img src="img/map2.jpg" width="600"></center><br />
+
 
             <h2 class="section-heading">Docker : veille technologique</h2>
 
-            <p>Docker est devenu l'un des sujets d'actualité, plusieurs personnes contribuent d'une manière ou autre dans cette veille par des articles ou bien des publications sur des réseaux sociaux, notamment twitter. D'une part, des experts twittent chaque jour des nouveautés sur Docker qui renforce sa puissance aujourd'hui dans les différentes applications, notons Cloud, Microservices et DevOps. D'autre part, Docker a eu pas mal des tweets négatifs qui critiquent ces concepts.</p>
 
-            <p>En utilisant tweetdeeck, j'ai trouvé plusieurs tweets qui attaquent Docker, par exemple :</p>
+            <p>Docker est l'un des technologies qui a pu révolutionner les infrastructures informatique en se basant sur la conteneurisation. DATADOG ont éffectués des statistiques basée sur les données de plus de 10,000 entreprises, 40% de ces derniers ont adopté la technologie Docker.</p>
+
+            <center><img src="img/datadog.jpg" width="600"></center>
+
+            <p>Cette évolution a permet au Docker d'être l'un des sujets d'actualité. Plusieurs personnes contribuent d'une manière ou autre dans cette veille par des articles ou bien des publications sur des réseaux sociaux, notamment twitter. D'une part, des experts twittent chaque jour des nouveautés sur Docker qui renforce sa puissance aujourd'hui dans les différentes applications, notons Cloud, Microservices et DevOps. D'autre part, Docker a eu pas mal des tweets négatifs qui critiquent ces concepts.</p>
+
+            <p>Parmi les tweets qui attaquent Docker, par exemple :</p>
 
 
             <center>
             <table>
               <tbody><tr>
                 <td><center><img src="img/critics.jpg" width="250"></center></td>
-                <td><center>Ces tweets évoquent plusieurs points négatifs du Docker en partageant l'article de l'equipe JAXENTER
-                  <br /><a href="https://jaxenter.com/docker-under-attack-what-motivates-dockers-critics-120654.html?utm_content=bufferfe8ba&amp;utm_medium=social&amp;utm_source=twitter.com&amp;utm_campaign=buffer" target="blank"><i>En savoir plus</i></a></center></td>
               </tr>
             </tbody></table>
+            </center>
+
+            <p>Ces tweets évoquent plusieurs points négatifs du Docker en partageant l'article de l'equipe JAXENTER :
+                   <a href="https://jaxenter.com/docker-under-attack-what-motivates-dockers-critics-120654.html?utm_content=bufferfe8ba&amp;utm_medium=social&amp;utm_source=twitter.com&amp;utm_campaign=buffer" target="blank"><i>En savoir plus</i></a></p>
+
 
             <p>Ci-dessous deux exemples des tweets qui favorisent l'utilisation du Docker :</p>
 
+            <center>
             <table>
               <tbody><tr>
                 <td><center><img src="img/twit3.jpg" width="250"></center></td>
@@ -125,12 +128,13 @@
             Pour savoir plus d'information sur cet Hashtag  : <a href="http://hashtagify.me/hashtag/docker">Cliquer ici</a>
 
 
-            <p>Dans la suite de la veille, nous allons voir une synthèse qui résume les différents articles et opinions des gens actifs dans les réseaux sociaux et sur internet en générale. Nous allons voir aussi le fonctionnement de la conteneurisation et Docker. Comme conclusion, je vais partager mon avis concernant ce sujet, ainsi que des critiques sur la conteneurisation.</p>
+            <p>Dans la suite de la veille, nous allons voir une synthèse qui résume les différents articles et opinions des gens actifs dans les réseaux sociaux et sur internet en générale. Nous allons voir aussi les concepts de la conteneurisation et Docker. Comme conclusion, je vais partager mon avis concernant ce sujet, ainsi que des critiques sur la conteneurisation.</p>
 
+            <h2 class="section-heading">Introduction</h2><br/>
 
             <h6>La problèmatique ?</h6>
 
-            <p>Le tweet ci-dessous résume la problèmatique résolu par les conteneur : </p>
+            <p>Le tweet ci-dessous résume la problèmatique résolu par la conteneurisation en informatique : </p>
 
             <center><img src="img/problem.jpg" width="250"></center>
 
@@ -139,12 +143,176 @@
 
             <h6>Conteneurisation comme solution</h6>
 
-            <p>Ceci à invoquer la notion de la conteneurisation qui a pu d'une manière ou autre d'isoler une application dans un conteneur qui ne dépend pas à l'environnement. Les conteneurs dans le monde informatique ne sont pas différents que celles du monde réel ce qu'on appelle les conteneurs intermodaux, le rôle de ces derniers est de transporter des biens ou des produits indépendamment du moyen de transport, aussi les conteneurs informatiques sert à livrer ou déployer une solution informatique indépendamment de l'environnement.</p>
+            <p>Ceci à invoquer la notion de la conteneurisation qui a pu d'une manière ou autre d'isoler une application dans un conteneur qui ne dépend pas à l'environnement. Les conteneurs dans le monde informatique ne sont pas différents à celles du monde réel ce qu'on appelle les conteneurs intermodaux, le rôle de ces derniers est de transporter des biens ou des produits indépendamment du moyen de transport, et les conteneurs informatiques sert à livrer ou déployer une solution informatique indépendamment de l'environnement.</p>
 
             <center><img src="img/container.jpg" width="300" height="150"></center><br>
 
 
             <a href="container.html#start"><h6>Sur quoi s'appuie la conteneurisation ?</h6></a> 
+
+
+            <h2 class="section-heading">La conteneurisation</h2><br>
+
+            <h6 class="post-subtitle">Aspet fonctionnel des conteneurs</h6>
+
+
+            <p>Comme j'ai évoqué en introduction, les conteneurs du monde informatique cherchent à répondre à la même problématique que les conteneurs physiques. De très nombreux incidents survient lors de la mise en exploitation d'un développement afin de livrer une solution logicielle et c'est justement ce que la notion de conteneurisation cherche à résoudre.</p>
+
+            <p>Alors pour bien définir qu'est ce qu'un conteneur fonctionnellement, c'est une enveloppe virtuelle qui permet de packager une application avec tous les éléments dont elle a besoin pour fonctionner (fichiers source, librairies et outils). Cette enveloppe sera déployé sur un serveur et son système d'exploitation (OS). Contrairement à la virtualisation, un conteneur n’embarque pas d’OS, il s’appuie directement sur celui du serveur sur lequel il est déployé. Un conteneur est donc beaucoup plus légé qu’une VM qui intégrera un OS.
+            </p>
+
+            <center><img src="img/container_arch.jpg" height="250"></center><br /><br />
+
+            <h6 class="post-subtitle">Aspet technique des conteneurs</h6><br>
+
+            Les système d'exploitation du hôte qui gére les conteneurs considère ces derniers comme des processus normaux dont il manipule les ressources (RAM, Stockage et processeur). Pour bien isoler ces processus, on se base sur les techniques suivantes :<br> <br>
+            <ul>
+              <li>CGroups : c'est une fonctionalité du noyau Linux qui a comme objectif la limitation de l'utilisation des ressources.</li>
+              <li>Namespaces : cette fonctionalité permet à des porcessus de ne pas voir les ressources utilisées par d'autres, elle apporte l'isolation nécessaire à les fichiers des conteneurs</li>
+            </ul>
+
+            <p>Donc, un conteneur est tout simplement un ensemble de fichiers avec des processus isolés grâce à CGroups et Namespace.</p>
+
+
+            <a href="docker.html#start"><h6 class="post-subtitle">Comment Docker a pu révolutionner la conteneurisation ?</h6></a>
+
+
+            <h2 class="section-heading">Docker et la conteneurisation</h2>
+
+            <p>Docker est une plateform qui permet de gérer plusieurs conteneurs virtuels avec la possibilité d'automatiser le déploiement d’applications dans ces conteneurs. A l’origine basée sur le format de Conteneurs Linux, la société Docker a élargi le projet  en proposant notamment une API qui permet d’exécuter des conteneurs standards et portables d’un serveur Linux à l’autre. Cette plateforme va vous permettre d'exécuter votre code à l'intérieur d'un conteneur indépendamment de la machine sur laquelle vous êtes.
+            </p>
+
+
+            <p>Docker a apporté des nouveautés aux conteneurs informatique, par exemple ils ont arrivé à optimiser la taille des conteneurs en mutualisant les données (les fichiers), et plusieurs notions qui lui a permet d'être parmi les leaders.
+
+            </p><h6 class="post-subtitle">Notion d'image</h6>
+
+            <p>Comme nous avons vu un conteneur est un ensemble des fichiers sur lequel s'exécutent des processus. On peut alors construire une arborescence des fichiers dans OS qui pourra être les fichiers d'un conteneur. Alors, les images sont des archives des fichiers des conteneurs déjà crées qui peuvent être échangé et réutiliser pour créer d'autres conteneurs qui ont la même structure que le premier.</p>
+
+            <h6 class="post-subtitle">Docker Hub et registry </h6>
+
+            <p>Le registry est l'annuaire et le centre de stockage des images (archives) réutilisables. Sa principale instanciation est le Docker Hub publique : <a href="https://hub.docker.com/">Cliquer ici pour ouvrir le docker hub</a></p>
+
+            <h6 class="post-subtitle">Copy on write</h6>
+
+            <p>
+              Un conteneur peut se baser sur plusieurs images ou plutôt une pile d'images dont on ne peut pas modifier les fichiers de configuration. Pour ce faire, le fichier de configuration original sera copié et la nouvelle version surcharge la version originale. C'est le principe de Copy on write (COW) qui va nous permet de changer ou modifier une image déjà créée.
+            </p>
+
+            <h6 class="post-subtitle">Docker engine</h6>
+
+            <p>Le Docker Engine est le logiciel qui gère les conteneurs sur une machine, c'est lui qui gère les ressources utilisées par des conteneurs ainsi que les réseaux et le stockage. 
+            </p>
+
+            <center><img src="img/docker_arch.jpg" width="200"></center>
+
+            <p>L'image ci-dessus résume l'architecture du docker et ces conteneurs.</p>
+
+
+            <h2 id="application" class="section-heading">Application multi-conteneur</h2>
+
+            <p>Avec la notion des conteneurs et les apports ajoutés par Docker, on peut concevoir une architecture multi-conteneur pour fournir des services à exploiter.</p>
+
+            <p>Prenant l'exemple d'une application web avec une base de données MySQL, on a la possibilité de déployer l'application dans un conteneur et la base de données MySQL dans un autre conteneur. Allant plus loin, on ajoute un conteneur qui contient un serveur Nginx (Reverse proxy) qui va distribuer les requêtes sur trois instances du conteneur de l'application web, ces derniers interagissent avec un seul conteneur de MySQL pour des éventuels appels au base de données.</p>
+
+            <center><img src="img/Docker_mutli_container.jpg" height="500" width="500"></center>
+
+
+            <p>Docker nous permet de concevoir une tel architecture tout en bénéficiant de ces points fort tel que la taille des conteneurs et la gestion du stockage. Pour la communication entre les différents conteneur, Docker permet d'élaborer un réseau virtuel entre les conteneurs.</p>
+
+
+            <h2 id="swarm" class="section-heading">Docker swarm</h2>
+
+            <p>Imaginer maintenant si on veut gérer plusieurs hôtes qui contient Docker afin de construire un Docker cluster. Cela peut être réalisé à l'aide du Docker swarm qui nous permet de gérer plusieurs hôtes contenant un Docker engine comme un seul hôte.</p>
+
+            <p>Pour cela, Docker swarm se base sur les points suivants :
+            </p><ul>
+                <li>Un client Docker : Il gère les conteneur du cluster Swarm.</li>
+                <li>Un service de découverte : C'est pour centraliser les informations sur tous les hôtes appartenant au Cluster.</li>
+                <li>Un maître de Swarm :  ou bien Master, il gère les différents nœuds du cluster et il orchestre l'ensemble des conteneurs.</li>
+                <li>Plusieurs nœuds Swarm : l'ensemble des hôtes qui contient les conteneurs du Cluster Swarm.</li>
+            </ul>
+            <p></p><br>
+
+            <center><img src="img/swarm.jpg" width="400"></center><br>
+
+            <h2 id="vms" class="section-heading">Docker vs Virtualisation</h2>
+
+            <p>
+            Après avoir consulter plusieurs articles et tweets concernant le débat de docker contre la virtualisation, j'ai pu synthétiser ce débat dans les points suivants :
+
+            <ul>
+              <li>Docker est une manière de virtualisation mais au niveau système d'exploitation, par contre la vrai virtualisation se base sur des ressources physiques. </li>
+              <li>Docker conteneurs sont beaucoup plus léger que les VMs.</li>
+              <li>Docker n'embarque pas un système d'exploitation dans la machine, à l'opposé de la virtualisation.</li>
+              <li>La virtualisation nécessite plus de ressources (RAM et Stockage) pour construire des VMs, au contraire Docker s'appuie sur les ressources de système d'exploitation du hôte.</li>
+              <li>Les conteneurs ont des dépendances avec l'OS du hôte, par contre la virtualisation ne dépend pas à la machine hôte.</li>
+            </ul>
+            </p>
+
+            <a href="critiques.html#start"><h6 class="post-subtitle">Est ce que la problèmatique est résolu par Docker ?</h6></a>
+
+
+            <h2 class="section-heading">Critiques</h2>
+
+            <p>Certes, Docker a pu résoudre plusieurs problèmes en se basant sur la conteneurisation, il a pu découpler les applications et leurs environnement de déploiement afin de rendre ce dernier plus facile.<br>
+
+            En revanche, même avec les avantages du Docker, nous ne pouvons pas négliger ces points faibles qui peuvent être un obstacle devant son utilisation. <br><br>
+
+            Premièrement, avec les conteneurs Docker a pu isoler les applications de leurs environnements mais non pas ces dépendances avec l'environnement. En effet, la mise à jours du système de l'environnement peut influencer Docker lui-même, alors les conteneurs aussi peuvent être influencer, de ce fait Docker n'a pas pu isoler les applications à 100%.<br> <br>
+
+            Deuxièment, puisque les conteneurs sont basés sur des fichiers stockés dans le système d'exploitation de l'hôte, alors il y'a une possibilité que les conteneurs voient les fichiers d'autres conteneurs en changeant leurs nom d'espace (avec l'utilisateur ROOT) qui va causer des problèmes de sécurité.<br><br>
+
+            Troisièment, avec des architectures complexes, la structure des fichiers des conteneurs devienne compliquée et désordonnée qui va rendre la gestion et la manipulation des conteneurs difficiles.<br><br>
+
+            Finalement, grâce au Docker plusieurs technologies ont été développé d'une manière inimaginable, donnant l'exemple des Microservices et l'intégration continue dans la philosophie DevOps. Alors au niveau de ces dernières technologies, je préfère l'utilisation du Docker puisque ces avantages vont nous aider à bien adopter ces technologies.
+
+          </p>
+
+
+          <h2 class="section-heading">Webographie</h2><br>
+
+          <h6 class="post-subtitle">Des experts du domaine :</h6> <br />
+
+            Nick Janetakis : <a target="blank" href="https://twitter.com/nickjanetakis">https://twitter.com/nickjanetakis</a><br />
+            Dieter Reuter : <a target="blank" href="https://twitter.com/Quintus23M">https://twitter.com/Quintus23M</a><br />
+            Kelsey Hightower : <a target="blank" href="https://twitter.com/kelseyhightower">https://twitter.com/kelseyhightower</a><br />
+            Patrick Chanezon : <a target="blank" href="https://twitter.com/chanezon">https://twitter.com/chanezon</a><br />
+
+            <br /> 
+            <h6 class="post-subtitle">Webographie :</h6>
+
+              <p>
+                <i>Docker et virtulisation</i> :<br/> <a href="https://blog.docker.com/2016/04/containers-and-vms-together/" target="blank">https://blog.docker.com/2016/04/containers-and-vms-together/</a><br/><br/>
+          
+                <i>Docker Vs virtualisation</i> :<br/> <a href="https://cloudacademy.com/blog/docker-vs-virtualization/" target="blank">https://cloudacademy.com/blog/docker-vs-virtualization/</a><br/><br/>
+
+                <i>Présentation du Docker</i>:<br/> <a href="http://ippon.developpez.com/tutoriels/virtualisation/docker-presentation-part-1/">http://ippon.developpez.com/tutoriels/virtualisation/docker-presentation-part-1/</a><br/><br/>
+
+                <i>Docker critics </i>: <br/><a href="https://jaxenter.com/docker-under-attack-what-motivates-dockers-critics-120654.html?utm_content=bufferfe8ba&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer">https://jaxenter.com/docker-under-attack-what-motivates-dockers-critics-120654.html?utm_content=bufferfe8ba&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer</a><br/><br/>
+
+                <i>Docker usage report</i>:<br />
+                <a href="https://www.datadoghq.com/docker-adoption/?utm_campaign=coschedule&utm_source=twitter&utm_medium=infralovers">https://www.datadoghq.com/docker-adoption/?utm_campaign=coschedule&utm_source=twitter&utm_medium=infralovers</a>
+                
+
+
+
+              </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
             

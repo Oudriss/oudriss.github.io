@@ -66,7 +66,7 @@
               </li>
               <li class="list-inline-item">
                 <a href="curateur.html#start">
-                  Curateurs |
+                  webographie | 
                 </a>
               </li>
               <li class="list-inline-item">
@@ -86,13 +86,10 @@
 
             <p>Comme j'ai évoqué en introduction, les conteneurs du monde informatique cherchent à répondre à la même problématique que les conteneurs physiques. De très nombreux incidents survient lors de la mise en exploitation d'un développement afin de livrer une solution logicielle et c'est justement ce que la notion de conteneurisation cherche à résoudre.</p>
 
-            <p>Alors pour bien définir qu'est ce qu'un conteneur fonctionnellement, c'est une enveloppe virtuelle qui permet de packager une application avec tous les éléments dont elle a besoin pour fonctionner (fichiers source, runtime, librairies, outils et fichiers). Ils sont packagés en un ensemble cohérent et prêt à être déployé sur un serveur et son système d'exploitation (OS). Contrairement à la virtualisation, un conteneur n’embarque pas d’OS, il s’appuie directement sur celui du serveur sur lequel il est déployé. Un conteneur est donc beaucoup plus légé qu’une VM qui intégrera un OS. Une VM se mesure en Go quand le volume d’un conteneur se chiffrera en Mo.
+            <p>Alors pour bien définir qu'est ce qu'un conteneur fonctionnellement, c'est une enveloppe virtuelle qui permet de packager une application avec tous les éléments dont elle a besoin pour fonctionner (fichiers source, librairies et outils). Cette enveloppe sera déployé sur un serveur et son système d'exploitation (OS). Contrairement à la virtualisation, un conteneur n’embarque pas d’OS, il s’appuie directement sur celui du serveur sur lequel il est déployé. Un conteneur est donc beaucoup plus légé qu’une VM qui intégrera un OS.
             </p>
 
-            <center><img src="img/container_arch.jpg" width="500" height="250"></center>
-
-            <p>Dans une architecture à base des conteneurs, le système d'exploitation contient les dépendances nécessaire pour faire fonctionner l'application déployer dans le conteneur. Par contre, l'application est géré par les développeurs de la solution logicielle. Ce qui offre une isolation qui permet aux développeurs d'embarquer l'ensemble des dépendances dont il besoin.
-            </p>
+            <center><img src="img/container_arch.jpg" height="250"></center><br /><br />
 
             <h6 class="post-subtitle">Aspet technique des conteneurs</h6><br>
 
@@ -102,7 +99,10 @@
               <li>Namespaces : cette fonctionalité permet à des porcessus de ne pas voir les ressources utilisées par d'autres, elle apporte l'isolation nécessaire à la création des fichiers des conteneurs</li>
             </ul>
 
-            Donc, un conteneur est tout simplement un ensemble de fichier avec des processus qui s'éxecutent (conteneur) : Grâce à CGroups on limite les ressources et Namespace aide à isoler ces processus.
+            <p>Donc, un conteneur est tout simplement un ensemble de fichier avec des processus isolés grâce à CGroups et Namespace.</p>
+
+
+            <a href="docker.html#start"><h6 class="post-subtitle">Comment Docker a pu révolutionner la conteneurisation ?</h6><br></a>
 
             
           </div>

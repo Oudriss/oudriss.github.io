@@ -1,0 +1,199 @@
+<html lang="en"><head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Clean Blog - Start Bootstrap Theme</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this template -->
+    <link href="css/clean-blog.min.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <!-- Page Header -->
+    <header class="masthead" style="background-image: url('img/docker.png')">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10" style="float:right">
+            <div class="post-heading">
+              <h1>Docker</h1>
+              <h2 class="subheading">Pratiques des architectures à base des conteneurs</h2>
+              <span class="meta">Par
+                <a href="#">Soufiane OUDRISS</a>
+                07 Mars 2018</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Post Content -->
+    <article>
+      <div class="container">
+        <ul id="start" class="list-inline text-center">
+              <li class="list-inline-item">
+                <a href="veille.html#start">
+                    Veille technologique |
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="container.html#start">
+                    Conteneurisation |
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="docker.html#start">
+                    Docker |
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="critiques.html#start">
+                    Critiques |
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="curateur.html#start">
+                  Curateurs | 
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="future.html#start">
+                    Future
+                </a>
+              </li>
+            </ul>
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+
+            <h2 class="section-heading">Docker et la conteneurisation</h2>
+
+            <p>Docker est un projet Open Source proposant une surcouche qui automatise et simplifie le déploiement d’applications dans des conteneurs virtuels. A l’origine basée sur le format de Conteneurs Linux LXC, la société Docker a élargi le projet  en proposant notamment une API qui permet d’exécuter des conteneurs standards et portables d’un serveur Linux à l’autre. Cette plateforme va vous permettre d'exécuter votre code à l'intérieur d'un conteneur indépendamment de la machine sur laquelle vous êtes.
+            </p>
+
+
+            <p>Docker a apporté des nouveauté decisives aux conteneurs informatique, par exemple ils ont arrivé à optimiser la taille des conteneurs en mutualisant les données ainsi que plusieurs notions qui lui a permet d'être parmi les leaders.
+
+            </p><h6 class="post-subtitle">Notion d'image</h6>
+
+            <p>Comme nous avons vu un conteneur est un ensemble des fichiers sur lequel s'exécutent des processus. On peut alors construire une arborescence des fichiers dans OS qui pourra être les fichiers d'un conteneur. Alors, les images sont des archives des fichiers des conteneurs déjà crées qui peuvent être échangé et réutiliser pour créer d'autres conteneurs qui ont la même structure que le premier.</p>
+
+            <h6 class="post-subtitle">Docker Hub et registry </h6>
+
+            <p>Le registry est l'annuaire et le centre de stockage des images (archives) réutilisables. Sa principale instanciation est le Docker Hub publique : <a href="https://hub.docker.com/">Cliquer ici pour ouvrir le docker hub</a></p>
+
+            <h6 class="post-subtitle">Copy on write</h6>
+
+            <p>
+              Un conteneur peut se baser sur plusieurs images ou plutôt une pile d'images dont on ne peut pas modifier les fichiers de configuration. Pour ce faire, le fichier de configuration original sera copié et la nouvelle version surcharge la version originale. C'est le principe de Copy on write (COW) qui va nous permet de changer ou modifier une image déjà créée.
+            </p>
+
+            <h6 class="post-subtitle">Docker engine</h6>
+
+            <p>Le Docker Engine est le logiciel qui gère les conteneurs sur une machine, c'est lui qui gère les ressources utilisées par des conteneurs ainsi que les réseaux et le stockage. 
+            </p>
+
+            <center><img src="img/docker_arch.png" width="200"></center>
+
+            <p>L'image ci-dessus résume l'architecture du docker et ces conteneurs.</p>
+
+
+            <h2 id="application" class="section-heading">Application multi-conteneur</h2>
+
+            <p>Avec la notion des conteneurs et les apports ajoutés par Docker, on peut concevoir une architecture multi-conteneur pour fournir des services à exploiter.</p>
+
+            <p>Prenant l'exemple d'une application web avec une base de données MySQL, on a la possibilité de déployer l'application dans un conteneur et la base de données MySQL dans un autre conteneur. Allant plus loin, on ajoute un conteneur qui contient un serveur Nginx (Reverse proxy) qui va distribuer les requêtes sur trois instances du conteneur de l'application web, ces derniers interagissent avec un seul conteneur de MySQL pour des éventuels appels au base de données.</p>
+
+            <center><img src="img/Docker_mutli_container.png" height="500" width="500"></center>
+
+
+            <p>Docker nous permet de concevoir une tel architecture tout en bénéficiant de ces points fort tel que la taille des conteneurs et la gestion du stockage. Pour la communication entre les différents conteneur, Docker permet d'élaborer un réseau virtuel entre les conteneurs.</p>
+
+
+            <h2 id="swarm" class="section-heading">Docker swarm</h2>
+
+            <p>Imaginer maintenant si on veut gérer plusieurs hôtes qui contient Docker afin de construire un Docker cluster. Cela peut être réalisé à l'aide du Docker swarm qui nous permet de gérer plusieurs hôtes contenant un Docker engine comme un seul hôte.</p>
+
+            <p>Pour cela, Docker swarm se base sur les points suivants :
+            </p><ul>
+                <li>Un client Docker : Il gère les conteneur du cluster Swarm.</li>
+                <li>Un service de découverte : C'est pour centraliser les informations sur tous les hôtes appartenant au Cluster.</li>
+                <li>Un maître de Swarm :  ou bien Master, il gère les différents nœuds du cluster et il orchestre l'ensemble des conteneurs.</li>
+                <li>Plusieurs nœuds Swarm : l'ensemble des hôtes qui contient les conteneurs du Cluster Swarm.</li>
+            </ul>
+            <p></p><br>
+
+            <center><img src="img/swarm.png" width="400"></center><br>
+
+            <h2 id="vms" class="section-heading">Docker vs Virtualisation</h2><br>
+
+            Après avoir consulter plusieurs articles et tweets concernant le débat de docker contre la virtualisation, j'ai pu synthétiser ce débat dans les points suivants :
+
+            <ul>
+              <li>Docker est une manière de virtualisation mais au niveau système d'exploitation, par contre la vrai virtualisation se base sur des ressources physiques. </li>
+              <li>Docker conteneurs sont beaucoup plus léger que les VMs.</li>
+              <li>Docker n'embarque pas un système d'exploitation dans la machine, à l'opposé de la virtualisation.</li>
+              <li>La virtualisation nécessite plus de ressources (RAM et Stockage) pour construire des VMs, au contraire Docker s'appuie sur les ressources de système d'exploitation du hôte.</li>
+              <li>Les conteneurs ont des dépendances avec l'OS du hôte, par contre la virtualisation ne dépend pas à la machine hôte.</li>
+            </ul>
+
+            
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <ul class="list-inline text-center">
+              <li class="list-inline-item">
+                <a href="#">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="copyright text-muted">Copyright © Soufiane OUDRISS 2018</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/clean-blog.min.js"></script>
+
+  
+
+
+</body></html>

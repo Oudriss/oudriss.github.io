@@ -1,0 +1,154 @@
+<html lang="en"><head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Clean Blog - Start Bootstrap Theme</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this template -->
+    <link href="css/clean-blog.min.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <!-- Page Header -->
+    <header class="masthead" style="background-image: url('img/docker.png')">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10" style="float:right">
+            <div class="post-heading">
+              <h1>Docker</h1>
+              <h2 class="subheading">Pratiques des architectures à base des conteneurs</h2>
+              <span class="meta">Par
+                <a href="#">Soufiane OUDRISS</a>
+                07 Mars 2018</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Post Content -->
+    <article>
+      <div class="container">
+        <ul id="start" class="list-inline text-center">
+              <li class="list-inline-item">
+                <a href="veille.html#start">
+                    Veille technologique |
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="container.html#start">
+                    Conteneurisation |
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="docker.html#start">
+                    Docker |
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="critiques.html#start">
+                    Critiques |
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="curateur.html#start">
+                  Curateurs |
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="future.html#start">
+                    Future
+                </a>
+              </li>
+            </ul>
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+
+            
+            <h2 class="section-heading">La conteneurisation</h2><br>
+
+            <h6 class="post-subtitle">Aspet fonctionnel des conteneurs</h6>
+
+
+            <p>Comme j'ai évoqué en introduction, les conteneurs du monde informatique cherchent à répondre à la même problématique que les conteneurs physiques. De très nombreux incidents survient lors de la mise en exploitation d'un développement afin de livrer une solution logicielle et c'est justement ce que la notion de conteneurisation cherche à résoudre.</p>
+
+            <p>Alors pour bien définir qu'est ce qu'un conteneur fonctionnellement, c'est une enveloppe virtuelle qui permet de packager une application avec tous les éléments dont elle a besoin pour fonctionner (fichiers source, runtime, librairies, outils et fichiers). Ils sont packagés en un ensemble cohérent et prêt à être déployé sur un serveur et son système d'exploitation (OS). Contrairement à la virtualisation, un conteneur n’embarque pas d’OS, il s’appuie directement sur celui du serveur sur lequel il est déployé. Un conteneur est donc beaucoup plus légé qu’une VM qui intégrera un OS. Une VM se mesure en Go quand le volume d’un conteneur se chiffrera en Mo.
+            </p>
+
+            <center><img src="img/container_arch.png" width="500" height="250"></center>
+
+            <p>Dans une architecture à base des conteneurs, le système d'exploitation contient les dépendances nécessaire pour faire fonctionner l'application déployer dans le conteneur. Par contre, l'application est géré par les développeurs de la solution logicielle. Ce qui offre une isolation qui permet aux développeurs d'embarquer l'ensemble des dépendances dont il besoin.
+            </p>
+
+            <h6 class="post-subtitle">Aspet technique des conteneurs</h6><br>
+
+            Les système d'exploitation du hôte qui gére les conteneurs considère ces derniers comme des processus normaux dont il manipule les ressources (RAM, Stockage et processeur). Pour bien isoler ces processus, on se base sur les techniques suivantes :<br> <br>
+            <ul>
+              <li>CGroups : c'est une fonctionalité du noyau Linux a comme objectif la limiatation et l'isolation de l'utilisation des ressources.</li>
+              <li>Namespaces : cette fonctionalité permet à des porcessus de ne pas voir les ressources utilisées par d'autres, elle apporte l'isolation nécessaire à la création des fichiers des conteneurs</li>
+            </ul>
+
+            Donc, un conteneur est tout simplement un ensemble de fichier avec des processus qui s'éxecutent (conteneur) : Grâce à CGroups on limite les ressources et Namespace aide à isoler ces processus.
+
+            
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <ul class="list-inline text-center">
+              <li class="list-inline-item">
+                <a href="#">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="copyright text-muted">Copyright © Soufiane OUDRISS 2018</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/clean-blog.min.js"></script>
+
+  
+
+
+</body></html>
